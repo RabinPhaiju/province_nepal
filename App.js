@@ -1,39 +1,25 @@
-import React, {useState} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Image,
-  StatusBar,
-  FlatList,
-  Sepa,
-} from 'react-native';
-import CenterImage from './test/CenterImage';
-import Header from './components/Header';
-import ListItem from './test/ListItem';
+import React, {useState, Fragment} from 'react';
+import {View, Button, SafeAreaView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+
+import HomeStack from './screens/HomeStack';
+import About from './screens/About';
+
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Header title="Nepal Province" />
-      <View style={styles.container}>
-        <CenterImage />
-      </View>
-      <ListItem />
-    </SafeAreaView>
+    <Fragment>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Province">
+          <Drawer.Screen name="Province" component={HomeStack} />
+          <Drawer.Screen name="About" component={About} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </Fragment>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    height: 140,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App;

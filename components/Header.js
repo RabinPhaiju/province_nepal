@@ -1,34 +1,33 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Image,
-  StatusBar,
-} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const Header = ({title}) => {
+const Header = ({navigation}) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.text}>{title}</Text>
+    <View style={styles.background}>
+      <Text style={styles.logoStyle}> Province Nepal </Text>
+      <Text style={styles.iconStyle} onPress={() => navigation.push('List')}>
+        <Icon name="search" size={40} selectionColor="grey" color="#0008" />
+      </Text>
     </View>
   );
 };
-Header.defaultProps = {
-  title: 'Title',
-};
 const styles = StyleSheet.create({
-  header: {
-    height: 60,
-    padding: 15,
-    backgroundColor: 'darkslateblue',
+  background: {
+    justifyContent: 'space-between',
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: '#f0eeee',
+    alignItems: 'center',
+    height: 50,
+    paddingHorizontal: 10,
   },
-  text: {
-    color: 'white',
-    fontSize: 23,
-    textAlign: 'center',
+  logoStyle: {
+    fontSize: 22,
+  },
+
+  iconStyle: {
+    paddingHorizontal: 16,
   },
 });
 
