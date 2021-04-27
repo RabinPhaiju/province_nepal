@@ -5,10 +5,10 @@ import {
   FlatList,
   StyleSheet,
   Text,
-  StatusBar,
+  // StatusBar,
   TouchableHighlight,
-  TouchableOpacity,
-  Alert,
+  // TouchableOpacity,
+  // Alert,
 } from 'react-native';
 import SearchBar from './SearchBar';
 
@@ -114,7 +114,7 @@ const ListItem = ({navigation}) => {
         // snapToInterval={100}
         // decelerationRate={'fast'}
         renderItem={({item}) => {
-          return item.district.toLowerCase().includes(search.toLowerCase()) ? (
+          return item.zone.toLowerCase().includes(search.toLowerCase()) || item.district.toLowerCase().includes(search.toLowerCase()) ? (
             <TouchableHighlight
               style={styles.items}
               activeOpacity={0.8}
@@ -123,7 +123,7 @@ const ListItem = ({navigation}) => {
                 <Text style={styles.text}>
                   {item.province}
                   {'. '}
-                  {item.district} {'  --  '} {item.zone}
+                  {item.district} {'  --   '} {item.zone}
                 </Text>
               </View>
             </TouchableHighlight>

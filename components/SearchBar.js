@@ -15,12 +15,12 @@ const SearchBar = ({navigation, serach, onSearchChagne}) => {
         style={styles.iconStyle}
       />
       <TextInput
-        placeholder="Search District"
+        placeholder="Search District / Zone"
         style={styles.inputStyle}
         value={serach}
         onChangeText={(newText) => onSearchChagne(newText)}
       />
-      <Icon name="search" size={36} color="#0008" style={styles.iconStyle} />
+      <Icon name="search" size={32} color="#0008" style={styles.iconStyle} />
     </View>
   );
 };

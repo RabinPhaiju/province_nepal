@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Text, View, SafeAreaView} from 'react-native';
+// import {Text, View, SafeAreaView} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 import Province1 from './province/Province1';

@@ -1,6 +1,6 @@
 import React, {useState, Fragment} from 'react';
-import {View, Button, SafeAreaView} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+// import {View, Button, SafeAreaView} from 'react-native';
+// import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import ListItem from '../components/ListItem';

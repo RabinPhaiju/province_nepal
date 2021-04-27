@@ -7,7 +7,7 @@ const Header = ({navigation}) => {
     <View style={styles.background}>
       <Text style={styles.logoStyle}> Province Nepal </Text>
       <Text style={styles.iconStyle} onPress={() => navigation.push('List')}>
-        <Icon name="search" size={40} selectionColor="grey" color="#0008" />
+        <Icon name="search" size={32} selectionColor="grey" color="#0008" />
       </Text>
     </View>
   );
